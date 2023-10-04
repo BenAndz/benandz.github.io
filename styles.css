@@ -56,6 +56,9 @@ nav ul {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
+    &:hover {
+        color: black;
+    }
 }
 
 @media (max-width: 768px) {
@@ -122,6 +125,9 @@ nav ul {
     font-weight: 700;
     box-shadow: 0 10px 100px rgba(0,0,0,0.2);
     text-decoration: none;
+    &:hover {
+        box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
+    }
 }
 
 .home-socials {
@@ -234,6 +240,9 @@ nav ul {
     font-weight: 700;
     text-decoration: none;
     justify-content: center;
+    &:hover {
+        box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
+    }
 }
 
 .little-title-skills {
@@ -343,6 +352,9 @@ nav ul {
     font-weight: 700;
     text-decoration: none;
     justify-content: center;
+    &:hover {
+        box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
+    }
 }
 
 .little-title-skills {
@@ -435,6 +447,9 @@ nav ul {
     text-decoration: none;
     justify-content: center;
     margin-left: auto;
+    &:hover {
+        box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
+    }
 }
 
 /* Footer */
@@ -456,6 +471,9 @@ nav ul {
     padding: 10px;
     display: flex; 
     align-items: center;
+    &:hover {
+        color: #01796f;
+    }
 }
 
 .footer-social-icon {
