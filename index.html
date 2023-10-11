@@ -211,14 +211,18 @@
                 Email.send({
                     SecureToken : "8db312cf-85e8-4c3a-87c8-5b8afc4e4068",
                     To : 'andrieux.ben@hotmail.fr',
-                    From : document.getElementById("email").value,
+                    From : "andrieux.ben@hotmail.fr",
                     Subject : "Nouveau message de " + document.getElementById("name").value,
-                    Body : document.getElementById("message").value,
+                    Body : "Nom: " + document.getElementById("name").value +
+                           "<br>Email: " + document.getElementById("email").value +
+                           "<br>Message:<br>" + document.getElementById("message").value,
+                    ReplyTo : document.getElementById("email").value
                 }).then(
-                message => alert("Message envoyé ! Merci pour l'intérêt que vous me portez !")
+                    message => alert("Message envoyé ! Merci pour l'intérêt que vous me portez !")
                 );
             }
-          </script>
+            </script>
+            
     </section>
 
     <footer>
