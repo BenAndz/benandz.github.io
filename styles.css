@@ -71,6 +71,11 @@ nav ul {
         text-align: center;
         gap: 0.5rem;
     }
+
+    .logo-container {
+        padding: 0 7.5rem 0 0;
+
+    }
 }
 
 /* Home */

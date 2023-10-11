@@ -76,6 +76,7 @@
                     <div class="skills-skill">Python</div>
                     <div class="skills-skill">React</div>
                     <div class="skills-skill">PHP</div>
+                    <div class="skills-skill">FastAPI</div>
                     <div class="skills-skill">GIT</div>
                     <div class="skills-skill">Github</div>
                     <div class="skills-skill">Responsive Design</div>
@@ -89,23 +90,6 @@
         <div class="projects-infos">
             Vous trouverez dans cette section quelques projets personnels que j'ai réalisés.
         </div>
-        <div class="projects-presentation-container">
-            <div class="projects-presentation-pic">
-                <img src="tetris.png" class="img">
-            </div>
-            <div class="projects-presentation-text">
-                <div class="little-title-infos">
-                    <h3>Tetris (JS)</h3>
-                </div>
-                <div class="little-text-infos">
-                    Projet qui m'a permis d'acquérir de nombreuses connaissances en JS. Mon objectif principal était de me familiariser avec la manipulation du DOM, le contrôle des événements, la logique du jeu, les structures de données, la gestion de l'état et les algorithmes.
-                </div>
-                <div>
-                    <a href="https://benandz.github.io/Tetris/" class="projects-button" target="_blank">Voir le projet</a>
-                </div>
-            </div>
-        </div>
-        <span class="space"></span>
         <div class="projects-presentation-container">
             <div class="projects-presentation-pic">
                 <img src="watowatch.png" class="img">
@@ -173,6 +157,23 @@
                 </div>
             </div>
         </div>
+        <span class="space"></span>
+        <div class="projects-presentation-container">
+            <div class="projects-presentation-pic">
+                <img src="tetris.png" class="img">
+            </div>
+            <div class="projects-presentation-text">
+                <div class="little-title-infos">
+                    <h3>Tetris (JS)</h3>
+                </div>
+                <div class="little-text-infos">
+                    Projet qui m'a permis d'acquérir de nombreuses connaissances en JS. Mon objectif principal était de me familiariser avec la manipulation du DOM, le contrôle des événements, la logique du jeu, les structures de données, la gestion de l'état et les algorithmes.
+                </div>
+                <div>
+                    <a href="https://benandz.github.io/Tetris/" class="projects-button" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+        </div>
 
         <div class="contact-title" id="contact">
             Contact
@@ -181,7 +182,7 @@
             N'hésitez pas à m'envoyer un message si vous êtes intéressé par mon profil.
         </div>
         <div class="contact-form-container">
-            <form action='#' class='contact-form' method='post'>
+            <form action='#' class='contact-form' onsubmit="sendEmail(); reset(); return false;" >
               <div class="contact-form-field">
                 <label class="contact-form-label" for="name">Nom</label>
                 <input required placeholder="Entrez votre nom" type="text" class="contact-form-input" name="name" id="name" />
@@ -189,6 +190,10 @@
               <div class="contact-form-field">
                 <label class="contact-form-label" for="email">Email</label>
                 <input required placeholder="Entrez votre mail" type="email" class="contact-form-input" name="email" id="email" />
+              </div>
+              <div class="contact-form-field">
+                <label class="contact-form-label" for="phone">Téléphone</label>
+                <input required placeholder="Entrez votre numéro de téléphone" type="text" class="contact-form-input" name="phone" id="phone" />
               </div>
               <div class="contact-form-field">
                 <label class="contact-form-label" for="message">Message</label>
@@ -200,6 +205,20 @@
             </form>
           </div>
 
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+            function sendEmail(){
+                Email.send({
+                    SecureToken : "8db312cf-85e8-4c3a-87c8-5b8afc4e4068",
+                    To : 'andrieux.ben@hotmail.fr',
+                    From : document.getElementById("email").value,
+                    Subject : "Nouveau message de " + document.getElementById("name").value,
+                    Body : document.getElementById("message").value,
+                }).then(
+                message => alert("Merci pour votre intérêt !")
+                );
+            }
+          </script>
     </section>
 
     <footer>
