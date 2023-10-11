@@ -517,3 +517,20 @@ footer h1 {
     padding-top: 1.8rem;
     color: #777;
 }
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .about-infos {
+        margin: 2rem 12rem;
+    }
+
+    .projects-infos {
+        margin: 2rem 12rem 4rem 12rem;
+    }
+
+    .contact-infos {
+        margin: 2rem 12rem 2rem 12rem;
+    }
+}
+
