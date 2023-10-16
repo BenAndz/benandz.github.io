@@ -1,8 +1,11 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    min-width: 100vh;
     font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -23,7 +26,6 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    padding: 0 0 0 2rem;
 }
 
 .logo-img {
@@ -40,10 +42,6 @@ header {
     text-transform: uppercase;
 }
 
-nav {
-    padding: 0 6.5rem 0 0;
-}
-
 nav ul {
     display: flex;
     gap: 4rem;
@@ -56,25 +54,63 @@ nav ul {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    &:hover {
-        color: black;
-    }
+}
+
+.link:hover {
+    color: black;
 }
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-img {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
     }
 
     nav ul {
         flex-direction: column;
-        text-align: center;
         gap: 0.5rem;
+        padding: 0;
+        width: 100%;
     }
 
-    .logo-container {
-        padding: 0 7.5rem 0 0;
+    nav ul li {
+        text-align: center;
+        width: 100%;
+    }
 
+    .link {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        width: 3rem;
+        height: 3rem;;
+    }
+
+    .logo-title {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    nav ul {
+        gap: 2rem;
     }
 }
 
@@ -95,28 +131,12 @@ nav ul {
     font-size: 4rem;
     font-weight: bolder;
     text-transform: uppercase;
-}
-
-@media (max-width: 1200px) {
-    .home-title {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .home-title {
-        font-size: 2rem;
-    }
-}
-@media (max-width: 480px) {
-    .home-title {
-        font-size: 1.5rem;
-    }
+    margin: 1rem 0;
 }
 
 .home-p {
-    margin: 4rem;
-    padding: 0 6rem 0 6rem;
+    margin: 2rem 0;
+    padding: 0 6rem;
     font-size: 1.5rem;
 }
 
@@ -130,9 +150,11 @@ nav ul {
     font-weight: 700;
     box-shadow: 0 10px 100px rgba(0,0,0,0.2);
     text-decoration: none;
-    &:hover {
-        box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
-    }
+    transition: box-shadow 0.3s;
+}
+
+.project-button:hover {
+    box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
 }
 
 .home-socials {
@@ -152,11 +174,85 @@ nav ul {
     width: 30px;  
     padding: 0.2rem;
     border-radius: 0.5rem;
+    transition: background 0.3s;
 }
 
 .home-social-icon:hover {
     background: linear-gradient(to right,rgb(3, 64, 58), rgba(1, 121, 111, 1),rgb(3, 64, 58));
 }
+
+@media (max-width: 1200px) {
+    .home-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2rem;
+    }
+
+    .home-p {
+        padding: 0 2rem;
+        font-size: 1.2rem;
+    }
+
+    .project-button {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
+
+    body .home-socials {
+        visibility: hidden;
+    }
+}
+
+
+@media (max-width: 498px) {
+    .home-title {
+        font-size: 1.5rem;
+    }
+
+    .home-p {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-title {
+        font-size: 1.5rem;
+    }
+
+    .home-p {
+        font-size: 1rem;
+    }
+
+    .project-button {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+@media (max-width: 466px) {
+    .home-p {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 374px) {
+    .home-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 323px) {
+    .home-title {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* Section */
 
@@ -269,6 +365,64 @@ nav ul {
     font-weight: bold;
 }
 
+/* Pour les tablettes et les petits écrans d'ordinateur */
+@media (max-width: 1024px) {
+    .about-infos {
+        margin: 2rem 5rem;
+    }
+
+    .about-presentation-container {
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+    .about-presentation-infos, .about-presentation-skills {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Pour les mobiles en mode paysage et les tablettes en mode portrait */
+@media (max-width: 768px) {
+    .about-infos {
+        margin: 2rem 2rem;
+    }
+
+    .about-presentation-container {
+        padding: 0 1rem;
+    }
+
+    .about-presentation-infos {
+        margin-bottom: 2rem; 
+    }
+
+    .little-text-infos, .little-title-infos, .little-title-skills {
+        font-size: 1rem;
+    }
+
+    .skills-skill {
+        margin: 0.5rem 0.5rem 0.5rem 0;
+    }
+}
+
+/* Pour les mobiles en mode portrait */
+@media (max-width: 480px) {
+    .about-infos {
+        margin: 1.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .about-button {
+        font-size: 1rem;
+        margin: 2rem 0 2rem 0;
+    }
+}
+
 /* Projets */
 
 .projects {
@@ -377,6 +531,57 @@ nav ul {
     border-radius: 0.5rem;
 }
 
+/* Pour les tablettes et les petits écrans d'ordinateur */
+@media (max-width: 1024px) {
+    .projects-infos {
+        margin: 1.5rem 5rem;
+    }
+
+    .projects-presentation-container {
+        flex-direction: column;
+        padding: 0 2rem;
+        gap: 2rem; /* Espace entre les éléments lorsqu'ils sont empilés verticalement */
+    }
+
+    .projects-presentation-pic, .projects-presentation-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .img {
+        max-height: 250px; /* Limiter la hauteur de l'image */
+    }
+}
+
+/* Pour les mobiles en mode paysage et les tablettes en mode portrait */
+@media (max-width: 768px) {
+    .projects-infos {
+        margin: 1.5rem 2rem;
+    }
+
+    .little-text-infos, .little-title-infos, .little-title-skills {
+        font-size: 1rem;
+    }
+}
+
+/* Pour les mobiles en mode portrait */
+@media (max-width: 480px) {
+    .projects-infos {
+        margin: 1rem;
+        font-size: 1rem;
+    }
+
+    .projects-title {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .projects-button {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+}
+
 /* Contact */
 
 .contact-title {
@@ -406,10 +611,18 @@ nav ul {
     color: #111
 }
 
+.contact-form {
+    max-width: 600px;       
+    width: 100%;             
+}
+
 .contact-form-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
+    align-items: center;    
     flex-direction: column;
+    width: 100%;     
+    padding: 2rem;
 }
 
 .contact-form-label {
@@ -439,8 +652,9 @@ nav ul {
 }
 
 
-.about-button {
+.about-button-2 {
     display: flex;
+    width: 200px;
     margin: 2rem 20rem 2rem 0rem;
     padding: 1rem;
     font-size: 1.5rem;
@@ -450,10 +664,55 @@ nav ul {
     color: white;
     font-weight: 700;
     text-decoration: none;
+    align-items: center;
     justify-content: center;
-    margin-left: auto;
-    &:hover {
-        box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
+    margin-left: 12.5rem;
+}
+
+.about-button-2:hover {
+    box-shadow: 0 10px 25px rgba(1, 121, 111, 1);
+}
+
+/* Pour les tablettes et les petits écrans d'ordinateur */
+@media (max-width: 1024px) {
+    .contact-infos {
+        margin: 1.5rem 5rem;
+    }
+}
+
+/* Pour les mobiles en mode paysage et les tablettes en mode portrait */
+@media (max-width: 768px) {
+    .contact-infos {
+        margin: 1.5rem 2rem;
+    }
+
+    .contact-form-label, .contact-form-input {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .about-button-2 {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Pour les mobiles en mode portrait */
+@media (max-width: 480px) {
+    .contact-infos {
+        margin: 1rem;
+    }
+
+    .contact-title {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .about-button-2 {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
     }
 }
 
@@ -518,79 +777,66 @@ footer h1 {
     color: #777;
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-    .about-infos {
-        margin: 2rem 12rem;
-    }
-
-    .projects-infos {
-        margin: 2rem 12rem 4rem 12rem;
-    }
-
-    .contact-infos {
-        margin: 2rem 12rem 2rem 12rem;
-    }
-}
-
 /* Pour les tablettes et les petits écrans d'ordinateur */
 @media (max-width: 1024px) {
-    .about-infos, .projects-infos, .contact-infos {
-        margin: 2rem 5rem;
+    .footer-socials {
+        gap: 15px;
+        margin-bottom: 15px;
     }
-    .about-presentation-container, .projects-presentation-container {
-        flex-direction: column;
-        padding: 0 2rem;
+
+    .footer-social-icon {
+        width: 1rem;
+        height: 1rem;
     }
-    .about-presentation-infos, .about-presentation-skills, .projects-presentation-pic, .projects-presentation-text {
-        width: 100%;
-        margin: 0;
+
+    footer h1 {
+        font-size: 1.5rem;
+    }
+
+    .Copyright {
+        font-size: 0.9rem;
     }
 }
 
 /* Pour les mobiles en mode paysage et les tablettes en mode portrait */
 @media (max-width: 768px) {
-    .about-infos, .projects-infos, .contact-infos {
-        margin: 2rem 2rem;
-    }
-    nav ul {
+    .footer-socials {
         flex-direction: column;
-        gap: 1rem;
+        gap: 10px;
+        margin-bottom: 10px;
     }
-    .home-title {
-        font-size: 2rem;
+
+    .footer-social-icon {
+        width: 0.9rem;
+        height: 0.9rem;
     }
-    .home-p {
-        margin: 2rem;
-        padding: 0 2rem;
-        font-size: 1.2rem;
+
+    footer h1 {
+        font-size: 1.3rem;
     }
-    .project-button, .about-button {
-        font-size: 1.2rem;
-        padding: 0.8rem 2rem;
-    }
-    body .home-socials {
-        justify-content: flex-start;
+
+    .Copyright {
+        font-size: 0.8rem;
     }
 }
 
 /* Pour les mobiles en mode portrait */
 @media (max-width: 480px) {
-    .about-infos, .projects-infos, .contact-infos {
-        margin: 1.5rem 1rem;
+    .footer-socials {
+        gap: 5px;
+        margin-bottom: 5px;
     }
-    .home-title {
-        font-size: 1.5rem;
+
+    .footer-social-icon {
+        width: 0.8rem;
+        height: 0.8rem;
     }
-    .home-p {
-        font-size: 1rem;
+
+    footer h1 {
+        font-size: 1.2rem;
     }
-    .project-button, .about-button {
-        font-size: 1rem;
-        padding: 0.7rem 1.5rem;
-    }
-    .skills-skill {
-        margin: 0.5rem 0.5rem 0.5rem 0;
+
+    .Copyright {
+        font-size: 0.7rem;
     }
 }
