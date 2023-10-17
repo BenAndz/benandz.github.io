@@ -241,9 +241,13 @@ nav ul {
     }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 375px) {
     .home-title {
         font-size: 1.3rem;
+    }
+    .home-p {
+        padding: 0.8rem 2rem;
+        font-size: 0.77rem;
     }
 }
 
@@ -251,6 +255,7 @@ nav ul {
     .home-title {
         font-size: 1.2rem;
     }
+    
 }
 
 
@@ -476,7 +481,7 @@ nav ul {
     align-items: flex-start;
     margin: 0 6rem 0 0;
     background: url(bus_stop.png);
-    background: center  ;
+    background: center;
 }
 
 .projects-presentation-text {
@@ -527,6 +532,21 @@ nav ul {
     object-position: center;
     border-radius: 0.5rem;
 }
+
+@media (min-width: 580px) and (max-width: 1024px) {
+    .projects-presentation-pic {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .img {
+        max-height: 300px;
+        width: auto; 
+    }
+}
+
 
 @media (max-width: 1024px) {
     .projects-infos {
