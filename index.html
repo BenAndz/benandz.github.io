@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Andrieux</title>
+    <title>Benjamin Andrieux - Développeur Web Fullstack</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Portfolio de Benjamin Andrieux, développeur web fullstack en alternance">
 </head>
 <body>
     <header>
@@ -12,9 +14,13 @@
             <img src="Photo_Profil.jpg" alt="Benjamin Andrieux" class="logo-img">
             <span class="logo-title">Benjamin ANDRIEUX</span>
         </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
         <nav>
             <ul>
-                <li><a href="#home" class="link">Accueil</a></li>
+                <li><a href="#" class="link" id="home-link">Accueil</a></li>
                 <li><a href="#about" class="link">À propos de moi</a></li>
                 <li><a href="#projects" class="link">Projets</a></li>
                 <li><a href="#contact" class="link">Contact</a></li>
@@ -23,46 +29,45 @@
     </header>
 
     <section class="home" id="home">
-        <div class="home-title">
-            Aspirant développeur web
-        </div>
-        <div class="home-p">
-            Recherche un contrat d'apprentissage pour janvier 2024.
-        </div>
-        <div class="home-button">
-            <a href="./#projects" class="project-button">Projets</a>
+        <div class="home-content">
+            <div class="home-title">Développeur Web Fullstack</div>
+            <div class="home-p">À la recherche d'un contrat d'alternance.</div>
+            <div class="home-button">
+                <a href="#projects" class="project-button">Voir mes projets</a>
+            </div>
         </div>
         <div class="home-socials">
             <div class="home-social">
-              <a href="https://www.linkedin.com/in/benjamin-andrieux-486632293/" class="home-social-icon-link" target="_blank">
-                <img src="https://d33wubrfki0l68.cloudfront.net/d8e6e1e636531e28274a1b8b6d947b817f6145bd/d42d3/assets/svg/linkedin-dark.svg" alt="Benjamin Andrieux Linkedin Profile" class="home-social-icon" />
+              <a href="https://www.linkedin.com/in/benjamin-andrieux-486632293/" class="home-social-icon-link" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
             <div class="home-social">
-              <a href="https://github.com/BenAndz" class="home-social-icon-link" target="_blank">
-                <img src="https://d33wubrfki0l68.cloudfront.net/38469cf88d038b6ba3322c9fcb93a8f7167df4b9/cb0b9/assets/svg/github-dark.svg" alt="Benjamin Andrieux Github Profile" class="home-social-icon" />
+              <a href="https://github.com/BenAndz" class="home-social-icon-link" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
               </a>
             </div>
-          </div>
+        </div>
     </section>
 
     <section class="section">
-        <div class="about-title" id="about">
-            À propos de moi
-        </div>
+        <div class="about-title" id="about">À propos de moi</div>
         <div class="about-infos">
-            Dans cette section, vous aurez un aperçu de mon parcours et de mes compétences techniques.
+            Dans cette section, vous découvrirez mon parcours et mes compétences techniques.
         </div>
+        
         <div class="about-presentation-container">
             <div class="about-presentation-infos">
                 <div class="little-title-infos">
                     <h3>Mon parcours</h3>
                 </div>
                 <div class="little-text-infos">
-                    Passionné par le monde du digital depuis mon adolescence, je suis en reconversion pour devenir développeur web fullstack après une enrichissante carrière de professeur en lettres modernes qui m’a doté d'excellentes compétences en communication, en analyse et en pédagogie. <br> Autodidacte en informatique depuis un an et intégrant l’école Epitech en septembre 2023, je recherche une alternance pour janvier 2024. Mon objectif est de mettre en pratique mes compétences, les développer et de participer activement à des projets stimulants
+                    Passionné par le monde du digital depuis mon adolescence, je suis en reconversion pour devenir développeur web fullstack après une enrichissante carrière de professeur en lettres modernes qui m'a doté d'excellentes compétences en communication, en analyse et en pédagogie.
+                    <br><br>
+                    Autodidacte en informatique depuis un an et intégrant l'école Epitech en septembre 2023, je recherche une alternance pour janvier 2024. Mon objectif est de mettre en pratique mes compétences, les développer et de participer activement à des projets stimulants.
                 </div>
-                <div class="contact-button">
-                    <a href="./#contact" class="about-button">Contact</a>
+                <div class="about-button-container">
+                    <a href="#contact" class="about-button">Me contacter</a>
                 </div>
             </div>
             <div class="about-presentation-skills">
@@ -70,136 +75,118 @@
                     <h3>Mes compétences</h3>
                 </div>
                 <div class="skills">
-                    <div class="skills-skill">HTML</div>
-                    <div class="skills-skill">CSS</div>
-                    <div class="skills-skill">JavaScript</div>
-                    <div class="skills-skill">Python</div>
-                    <div class="skills-skill">React</div>
-                    <div class="skills-skill">PHP</div>
-                    <div class="skills-skill">FastAPI</div>
-                    <div class="skills-skill">GIT</div>
-                    <div class="skills-skill">Github</div>
-                    <div class="skills-skill">Responsive Design</div>
-                  </div>
+                    <div class="skills-skill"><i class="fab fa-html5"></i> HTML</div>
+                    <div class="skills-skill"><i class="fab fa-css3-alt"></i> CSS</div>
+                    <div class="skills-skill"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="skills-skill"><i class="fab fa-python"></i> Python</div>
+                    <div class="skills-skill"><i class="fab fa-react"></i> React</div>
+                    <div class="skills-skill"><i class="fab fa-vuejs"></i> VueJS</div>
+                    <div class="skills-skill"><i class="fab fa-vuejs"></i> NuxtJS</div>
+                    <div class="skills-skill"><i class="fas fa-layer-group"></i> Quasar</div>
+                    <div class="skills-skill"><i class="fab fa-node-js"></i> NestJS</div>
+                    <div class="skills-skill"><i class="fab fa-php"></i> PHP</div>
+                    <div class="skills-skill"><i class="fas fa-server"></i> FastAPI</div>
+                    <div class="skills-skill"><i class="fas fa-database"></i> PostgreSQL</div>
+                    <div class="skills-skill"><i class="fas fa-database"></i> OracleDB</div>
+                    <div class="skills-skill"><i class="fab fa-git-alt"></i> GIT</div>
+                    <div class="skills-skill"><i class="fab fa-github"></i> Github</div>
+                    <div class="skills-skill"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
                 </div>
+            </div>
         </div>
 
-        <div class="projects-title" id="projects">
-            Mes projets
-        </div>
+        <div class="projects-title" id="projects">Mes projets</div>
         <div class="projects-infos">
-            Vous trouverez dans cette section quelques projets personnels que j'ai réalisés.
+            Découvrez quelques-uns de mes projets personnels les plus récents.
         </div>
-        <div class="projects-presentation-container">
-            <div class="projects-presentation-pic">
-                <img src="jobboard.png" class="img">
-            </div>
-            <div class="projects-presentation-text">
-                <div class="little-title-infos">
-                    <h3>JobPLS (HTML/CSS/JS/MySQL/Python)</h3>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="jobboard.png" alt="JobPLS project" class="img">
+                    <div class="project-overlay">
+                        <a href="https://github.com/BenAndz/JobBoard" class="projects-button" target="_blank">Voir le projet</a>
+                    </div>
                 </div>
-                <div class="little-text-infos">
-                    Plateforme JobBoard développée en deux semaines avec FastAPI et MySQL, consolidant mes compétences en back-end par la création de profils utilisateurs, la gestion des annonces d'emploi et l'implémentation d'un système de monitoring de base de données.
-                </div>
-                <div>
-                    <a href="https://github.com/BenAndz/JobBoard" class="projects-button" target="_blank">Voir le projet</a>
-                </div>
-            </div>
-        </div>
-        <span class="space"></span>
-        <div class="projects-presentation-container">
-            <div class="projects-presentation-pic">
-                <img src="watowatch.png" class="img">
-            </div>
-            <div class="projects-presentation-text">
-                <div class="little-title-infos">
-                    <h3>Watowatch (React.js)</h3>
-                </div>
-                <div class="little-text-infos">
-                    Projet React qui m'a permis d'apprendre les concepts de base de React.js : l'utilisation des hooks, la gestion de l'état, les effets secondaires, l'importation de modules, les API externes et les props.
-                </div>
-                <div>
-                    <a href="https://series-tv-populaires.vercel.app/" class="projects-button" target="_blank">Voir le projet</a>
+                <div class="project-info">
+                    <h3>JobPLS <span class="project-tech">HTML/CSS/JS/MySQL/Python</span></h3>
+                    <p>Plateforme JobBoard développée en deux semaines avec FastAPI et MySQL, consolidant mes compétences en back-end par la création de profils utilisateurs, la gestion des annonces d'emploi et l'implémentation d'un système de monitoring de base de données.</p>
                 </div>
             </div>
-        </div>
-        <span class="space"></span>
-        <div class="projects-presentation-container">
-            <div class="projects-presentation-pic">
-                <img src="ispent.png" class="img">
-            </div>
-            <div class="projects-presentation-text">
-                <div class="little-title-infos">
-                    <h3>ISpent (React.js)</h3>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="watowatch.png" alt="Watowatch project" class="img">
+                    <div class="project-overlay">
+                        <a href="https://series-tv-populaires.vercel.app/" class="projects-button" target="_blank">Voir le projet</a>
+                    </div>
                 </div>
-                <div class="little-text-infos">
-                    Projet qui m'a permis d'apprendre les concepts de base de React.js comme les composants, la gestion de l'état, le cycle de vie des composants, les props, les hooks et le render conditonnel.
-                </div>
-                <div>
-                    <a href="https://gerer-ses-depenses.vercel.app/" class="projects-button" target="_blank">Voir le projet</a>
+                <div class="project-info">
+                    <h3>Watowatch <span class="project-tech">React.js</span></h3>
+                    <p>Projet React qui m'a permis d'apprendre les concepts de base de React.js : l'utilisation des hooks, la gestion de l'état, les effets secondaires, l'importation de modules, les API externes et les props.</p>
                 </div>
             </div>
-        </div>
-        <span class="space"></span>
-        <div class="projects-presentation-container">
-            <div class="projects-presentation-pic">
-                <img src="LM1.png" class="img">
-            </div>
-            <div class="projects-presentation-text">
-                <div class="little-title-infos">
-                    <h3>Littréamont. (HTML/CSS/JS)</h3>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="ispent.png" alt="ISpent project" class="img">
+                    <div class="project-overlay">
+                        <a href="https://gerer-ses-depenses.vercel.app/" class="projects-button" target="_blank">Voir le projet</a>
+                    </div>
                 </div>
-                <div class="little-text-infos">
-                    Ce projet personnel est mon tout premier site qui m'a permis d'acquérir de nombreuses connaissances en HTML, CSS et JS.
-                </div>
-                <div>
-                    <a href="https://benandz.github.io/Site-lettres-modernes/index.html" class="projects-button" target="_blank">Voir le projet</a>
+                <div class="project-info">
+                    <h3>ISpent <span class="project-tech">React.js</span></h3>
+                    <p>Projet qui m'a permis d'apprendre les concepts de base de React.js comme les composants, la gestion de l'état, le cycle de vie des composants, les props, les hooks et le render conditonnel.</p>
                 </div>
             </div>
-        </div>
-        <span class="space"></span>
-        <div class="projects-presentation-container">
-            <div class="projects-presentation-pic">
-                <img src="météo_jour.png" class="img">
-            </div>
-            <div class="projects-presentation-text">
-                <div class="little-title-infos">
-                    <h3>Météo du jour</h3>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="météo_jour.png" alt="Météo du jour project" class="img">
+                    <div class="project-overlay">
+                        <a href="https://benandz.github.io/Meteo-du-jour/" class="projects-button" target="_blank">Voir le projet</a>
+                    </div>
                 </div>
-                <div class="little-text-infos">
-                    Projet réalisé afin de renforcer certaines compétences comme la manipulation du DOM, la gestion des dépendances, Node.js, le design responsive, l'utilisation d'une API.
-                </div>
-                <div>
-                    <a href="https://benandz.github.io/Meteo-du-jour/" class="projects-button" target="_blank">Voir le projet</a>
+                <div class="project-info">
+                    <h3>Météo du jour <span class="project-tech">HTML/CSS/JS</span></h3>
+                    <p>Projet réalisé afin de renforcer certaines compétences comme la manipulation du DOM, la gestion des dépendances, Node.js, le design responsive, l'utilisation d'une API.</p>
                 </div>
             </div>
-        </div>
-        <span class="space"></span>
-        <div class="projects-presentation-container">
-            <div class="projects-presentation-pic">
-                <img src="tetris.png" class="img">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="tetris.png" alt="Tetris project" class="img">
+                    <div class="project-overlay">
+                        <a href="https://benandz.github.io/Tetris/" class="projects-button" target="_blank">Voir le projet</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Tetris <span class="project-tech">JavaScript</span></h3>
+                    <p>Projet qui m'a permis d'acquérir de nombreuses connaissances en JS. Mon objectif principal était de me familiariser avec la manipulation du DOM, le contrôle des événements, la logique du jeu, les structures de données, la gestion de l'état et les algorithmes.</p>
+                </div>
             </div>
-            <div class="projects-presentation-text">
-                <div class="little-title-infos">
-                    <h3>Tetris (JS)</h3>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="LM1.png" alt="Littréamont project" class="img">
+                    <div class="project-overlay">
+                        <a href="https://benandz.github.io/Site-lettres-modernes/index.html" class="projects-button" target="_blank">Voir le projet</a>
+                    </div>
                 </div>
-                <div class="little-text-infos">
-                    Projet qui m'a permis d'acquérir de nombreuses connaissances en JS. Mon objectif principal était de me familiariser avec la manipulation du DOM, le contrôle des événements, la logique du jeu, les structures de données, la gestion de l'état et les algorithmes.
-                </div>
-                <div>
-                    <a href="https://benandz.github.io/Tetris/" class="projects-button" target="_blank">Voir le projet</a>
+                <div class="project-info">
+                    <h3>Littréamont <span class="project-tech">HTML/CSS/JS</span></h3>
+                    <p>Ce projet personnel est mon tout premier site qui m'a permis d'acquérir de nombreuses connaissances en HTML, CSS et JS.</p>
                 </div>
             </div>
         </div>
 
-        <div class="contact-title" id="contact">
-            Contact
-        </div>
+        <div class="contact-title" id="contact">Contact</div>
         <div class="contact-infos">
             N'hésitez pas à m'envoyer un message si vous êtes intéressé par mon profil.
         </div>
+        
         <div class="contact-form-container">
-            <form action='#' class='contact-form' onsubmit="sendEmail(); reset(); return false;" >
+            <form action='#' class='contact-form' onsubmit="sendEmail(); reset(); return false;">
               <div class="contact-form-field">
                 <label class="contact-form-label" for="name">Nom</label>
                 <input required placeholder="Entrez votre nom" type="text" class="contact-form-input" name="name" id="name" />
@@ -216,51 +203,80 @@
                 <label class="contact-form-label" for="message">Message</label>
                 <textarea required cols="30" rows="10" class="contact-form-input" placeholder="Entrez votre message" name="message" id="message"></textarea>
               </div>
-              <button type="submit" class="about-button-2">
-                Envoyer
+              <button type="submit" class="contact-button">
+                <i class="fas fa-paper-plane"></i> Envoyer
               </button>
             </form>
-          </div>
-
-          <script src="https://smtpjs.com/v3/smtp.js"></script>
-          <script>
-            function sendEmail(){
-                Email.send({
-                    SecureToken : "8db312cf-85e8-4c3a-87c8-5b8afc4e4068",
-                    To : 'andrieux.ben@hotmail.fr',
-                    From : "andrieux.ben@hotmail.fr",
-                    Subject : "Nouveau message de " + document.getElementById("name").value,
-                    Body : "Nom: " + document.getElementById("name").value +
-                           "<br>Email: " + document.getElementById("email").value +
-                           "<br>Message:<br>" + document.getElementById("message").value,
-                    ReplyTo : document.getElementById("email").value
-                }).then(
-                    message => alert("Message envoyé ! Merci pour l'intérêt que vous me portez !")
-                );
-            }
-            </script>
-            
+        </div>
     </section>
 
     <footer>
         <div class="wrapper">
             <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/benjamin-andrieux-486632293/" class="footer-social-linkedin" target="_blank">
-                    <img src="https://d33wubrfki0l68.cloudfront.net/d8e6e1e636531e28274a1b8b6d947b817f6145bd/d42d3/assets/svg/linkedin-dark.svg" alt="Benjamin Andrieux Linkedin Profile" class="footer-social-icon" />
-                    LinkedIn
+                <a href="https://www.linkedin.com/in/benjamin-andrieux-486632293/" class="footer-social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/BenAndz" class="footer-social-github" target="_blank">
-                    <img src="https://d33wubrfki0l68.cloudfront.net/38469cf88d038b6ba3322c9fcb93a8f7167df4b9/cb0b9/assets/svg/github-dark.svg" alt="Benjamin Andrieux Github Profile" class="footer-social-icon" />
-                    GitHub
+                <a href="https://github.com/BenAndz" class="footer-social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
                 </a>
             </div>
             <h1>Benjamin ANDRIEUX</h1>
             <div class="Copyright">
-                Copyright © 2023. Tous droits réservés.
+                Copyright © 2025. Tous droits réservés.
             </div>
         </div>
     </footer>
     
-    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                SecureToken : "8db312cf-85e8-4c3a-87c8-5b8afc4e4068",
+                To : 'andrieux.ben@hotmail.fr',
+                From : "andrieux.ben@hotmail.fr",
+                Subject : "Nouveau message de " + document.getElementById("name").value,
+                Body : "Nom: " + document.getElementById("name").value +
+                       "<br>Email: " + document.getElementById("email").value +
+                       "<br>Téléphone: " + document.getElementById("phone").value +
+                       "<br>Message:<br>" + document.getElementById("message").value,
+                ReplyTo : document.getElementById("email").value
+            }).then(
+                message => alert("Message envoyé ! Merci pour l'intérêt que vous me portez !")
+            );
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-toggle').checked = false;
+            });
+        });
+
+        // Special handling for home link to scroll to top
+        document.getElementById('home-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .about-presentation-infos, .about-presentation-skills').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
